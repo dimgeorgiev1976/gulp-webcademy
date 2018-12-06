@@ -16,13 +16,29 @@ head
 	
 	meta(name="keywords" content="")
 	meta(name="description" content="")
-	
-	<!-- build:cssVendor css/vendor.css -->
-	link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
-	<!-- endbuild -->
 
 	<!-- build:cssCustom css/main.css -->
 	link(rel="stylesheet", href="css/main.css")
+	<!-- endbuild -->
+
+	<!-- build:cssCustom css/vendor.css -->
+	link(rel="stylesheet", href="fonts/Museo_Sans/stylesheet.css")
+	<!-- endbuild -->
+
+	<!-- build:cssVendor css/vendor.css -->
+	link(rel="stylesheet", href="fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+	<!-- endbuild -->
+
+	<!-- build:cssVendor css/vendor.css -->
+	link(rel="stylesheet" href="libs/owl.carousel/assets/owl.carousel.min.css")
+	<!-- endbuild -->
+
+	<!-- build:cssVendor css/vendor.css -->
+	link(rel="stylesheet" href="libs/owl.carousel/assets/owl.theme.default.css")
+	<!-- endbuild -->
+
+	<!-- build:cssVendor css/vendor.css -->
+	link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
 	<!-- endbuild -->
 
 	<!--[if lt IE 9]>
@@ -35,11 +51,11 @@ body(class=pageClass)
 	
 	block content
 
-	include ../modules/footer.pug
-
 	<!-- build:jsLibs js/libs.js -->
 	script(src="libs/jquery/jquery.min.js")
 	<!-- endbuild -->
+
+	include ../modules/footer.pug
 
 	<!-- build:jsVendor js/vendor.js -->
 	block scripts
