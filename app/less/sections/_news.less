@@ -1,0 +1,70 @@
+@import "../base/_variables.less";
+.news__title {
+		position: relative;
+		font-family: 'Museo Sans 500';
+		font-weight: normal;
+		color: @card-btn;
+		line-height: 9.588px;
+		margin-left: 21px;
+	 @media (min-width: 768px){ 
+		line-height: 2.588px;
+		     }
+	span {
+		color: @card-btn;
+		line-height: 2.588px;
+	}
+	pre {
+	display: inline-block;	
+	font-family: 'Museo Sans 500';
+    white-space: pre;
+    font-size: 17px;
+    margin-right: 2px;
+    margin-bottom: 13px;
+	color: @grey-nav;
+    }
+	p.news__datetime {
+		color: @grey-nav;
+		line-height: 1.941px;
+		font-size: 17px;
+		&:after {
+			content: "rd";
+			font-size: 11px;
+			font-style: normal;
+			position: absolute;
+			left: 156px;
+			top: 35px;
+			display: block;
+			width: 15px;
+			height: 15px;
+		@media (min-width: 768px){
+			top: 32px;
+  			}
+		}
+	}
+	p.news__address {
+	font-family: 'Open Sans';
+	font-weight: normal;
+	font-size: 14px;
+	// line-height: 2px;
+	color: @grey-news;
+	letter-spacing: -0.040px;
+	margin-top: 3px;
+		}
+	span.news__datetime--time {
+		font-family: 'Open Sans';
+		font-weight: 600;
+		font-style: normal;
+		line-height: 1.352px;
+		color: @grey-nav;
+		letter-spacing: 0.321px;
+		}	
+	}
+.box-button--registr {
+	margin-left: auto;
+  margin-right: auto; 
+   @media (min-width: 768px){ 
+        margin-left: auto;
+		  margin-right: 9px; 
+		  margin-top: 15px;
+             }
+}

@@ -54,7 +54,7 @@ gulp.task('server:docs', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('./app/less/**/*.less')
+	return gulp.src('./app/less/main.less')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {

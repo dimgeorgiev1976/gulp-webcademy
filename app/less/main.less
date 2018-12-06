@@ -1,3 +1,21 @@
+
+// General
+@import "base/_base";
+@import "base/_variables";
+@import "base/_normalize";
+
+//Blocks
+// @import "blocks/_header";
+
+//Sections
+@import "sections/_card";
+@import "sections/_service-description";
+
+
+
+// @import "sections/_contacts";
+// @import "sections/_copyraight";
+
 @color: #222;
 
 body {
@@ -28,9 +46,22 @@ button {
 }
 
 .block {
-	display: flex;
+	background: #FFDB4C;
+	padding: 20px;
+	color: #000;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
-
+.header {
+	background-color: @redHead;
+}
+.container {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
 .icon-globe {
 	fill: #39B00F;
 	width: 112px;
