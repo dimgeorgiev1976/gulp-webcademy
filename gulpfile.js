@@ -45,12 +45,23 @@ gulp.task('server', function() {
 		gulp.start('svg');
 	});
 
+	watch('./src/js/*.js', function(){
+		gulp.start('js');
+	});
+
 });
 
 gulp.task('server:docs', function() {
 	browserSync.init({
 		server: { baseDir: './docs/'}
 	});
+
+});
+
+gulp.task('js', function(){
+	return gulp.src('./src/js/*.js')
+	.pipe(gulp.dest('./build/js'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('styles', function() {
@@ -138,10 +149,10 @@ gulp.task('copy:libs', function(callback) {
 
 gulp.task('default', function(callback){
     runSequence(
-    	['styles', 'pug', 'svg'],
+    	['styles', 'pug', 'svg', 'js'],
     	'del:libs',
     	'copy:libs',
-    	'server',
+       	'server',
 		callback
     )
 });
