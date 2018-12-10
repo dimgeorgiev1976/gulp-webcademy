@@ -3,5 +3,44 @@
 
 
 .card {
-	background-color: @grey-card;
-} 
+	background-color: @bluebutton;
+	// background-color: @grey-card;
+	padding-top: 424px;	
+	padding-bottom: 76px;
+	@media (min-width: 768px){ padding-top: 546px;	padding-bottom: 130px; }
+	@media (min-width: 1200px) {padding-top: 600px;	padding-bottom: 120px;} }  
+
+.card__img {
+	display: flex;
+	justify-content: center;
+	img { width:100%; max-width:500px;
+		height: 100%;max-height: 350px;
+			@media (min-width: 1200px) { } }  
+	&--mockups{	img { @media (min-width: 768px){ max-width:768px;	max-height: 650px; } } }
+	&--build{ margin-top: 13px; margin-bottom: 23px; 
+		img { @media (min-width: 768px){ max-width:737px;	max-height: 640px; } } }
+	&--solution { img { @media (min-width: 768px){ max-width:768px;	max-height: 650px; } } } }
+p.card__text {
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+	font-family: 'Museo Sans Cyrl 300';	
+	font-size: 56px;
+	font-weight: normal;
+	font-style: normal;
+	padding: 0;
+	margin: 0;
+	&--mockups, &--build, &--solution { }
+		span { color: @red-card; }
+			&--mockups{ margin-top: 120px; margin-bottom: 75px; }
+			&--build{ margin-top: 80px; margin-bottom: 76px; }
+			&--solution { margin-top: 273px; margin-bottom: 142px; }
+		@media (min-width: 768px){
+				&--mockups{	margin-top: 180px; 	margin-bottom: 380px;}
+				&--build{ margin-top: 180px; margin-bottom: 380px;} }
+				&--solution { margin-top: 266px; margin-bottom: 427px; }
+				
+		@media (min-width: 1200px) {  
+				&--mockups{margin-top: 180px; margin-bottom: 70px;}
+				&--build{ margin-top: 150px; margin-bottom: 70px;}
+				&--solution {margin-top: 190px; margin-bottom: 70px } }  }

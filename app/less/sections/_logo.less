@@ -1,11 +1,15 @@
 
 @import "../base/_variables.less";
 
+
 .header__inner-logo {
 	display: flex;
 	justify-content: center;
-    }
-
+	@media (min-width: 768px){
+		padding-right: 30px; }
+	@media (min-width: 1200px){
+		padding: 0;
+		} }
 .logo__title {
 	font-family: 'Museo Sans 500';
 	font-weight: normal;
