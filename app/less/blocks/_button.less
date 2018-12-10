@@ -3,25 +3,19 @@
 
 .button {
 	display: flex;
+    justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
-	
 	cursor: pointer;
 	transition: all 0.3s ease-in;
-	a {
-		
-	}
-	&:hover, &:focus {
-		color: #FFF;
-		background-color: transparent;
-		text-decoration: none;
-			}
-		&:active {
-			color: transparent;
-			outline: none;
-  			box-shadow: 0px 0px 40px rgba(72, 119, 159, 1);			
-			}
-		}
+	a {  }
+	&:hover, &:focus {color: #FFF;
+		background-color: transparent; text-decoration: none;}
+		&:active {color: transparent;outline: none;
+  			box-shadow: 0px 0px 40px rgba(72, 119, 159, 1);	} }
+.button-down {
+		  &--mockups { margin-bottom: 702px; } 
+		   &--build { margin-bottom: 726px; }  } 		
 .button__benefit{
 		letter-spacing: 0px;
 		padding: 12px 48px 10px;
@@ -37,20 +31,4 @@
 			margin-right: 3px;
 		}
 	}
-.button--join{
-	 padding: 14px 25px 8px;
-	margin-top: 0;
-		@media (min-width: 768px){
-  margin-top: -10px;
-  margin-bottom: 0; } }
-.button--registr {
-	color: #FFF;
-	background-color: @card-btn;
-	line-height: 1.5px;
-	padding: 19px 18px 17px;
-	&:hover, &:focus { color: #FFF;
-		background-color: @grey-nav;
-		text-decoration: none; } 
-	&:active { color: @yellow;
-		background-color: #000;} }
 
