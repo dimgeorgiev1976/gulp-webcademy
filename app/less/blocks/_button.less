@@ -14,21 +14,22 @@
 		&:active {color: transparent;outline: none;
   			box-shadow: 0px 0px 40px rgba(72, 119, 159, 1);	} }
 .button-down {
-		  &--mockups { margin-bottom: 702px; } 
-		   &--build { margin-bottom: 726px; }  } 		
-.button__benefit{
-		letter-spacing: 0px;
-		padding: 12px 48px 10px;
-		&--meetup {
-		padding: 13px 48px 10px;
-		}
-		&--slack {
-		padding: 13px 54px 10px;
-		margin-right: 4px;
-		}
-		&--wiki {
-			padding: 13px 60px 10px;
-			margin-right: 3px;
-		}
-	}
+		  &--mockups { margin-bottom: 470px; } 
+		   &--build { margin-bottom: 483px; } 
+		    @media (min-width: 768px) {  
+		   		&--mockups{ margin-bottom: 714px;}
+		   		&--build{ margin-bottom: 727px;	} } 		
+		   @media (min-width: 1200px) {  
+		   		&--mockups{ margin-bottom: 320px;}
+		   		&--build{ margin-bottom: 338px;	} }  } 		
+.button-down--service { 
+		margin-left: 24px;
+	@media (min-width: 768px){
+		margin-top: 58px;
+ 	    margin-left: 70px; }
+ 	    @media (min-width: 1200px){
+		margin-top: 50px;
+		margin-left: auto;
+ 	    margin-right: 70px; 
+ 	    }}
 

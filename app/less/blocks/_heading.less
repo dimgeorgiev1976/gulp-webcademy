@@ -2,28 +2,29 @@
 @import "../base/_variables.less";
 
 .heading {
-	font-family: 'Museo Sans 500';
-	font-size: 26px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Museo 300';
+	font-size: 100px;
 	font-weight: normal;
-	color: @grey-nav;
+	font-style: normal;
+	color: @grey-heading;
 	line-height: 1.692;
-	text-transform: uppercase;
 	text-align: center;
-	margin: 0 0 -18px;
-	&--m-b-small { margin-bottom: 20px;}
+	margin-bottom: 63px;
+	margin-left: 27px;
 
-	&--m-top-small { margin-top: -2px;
-		margin-bottom: -32px;
-		margin-right: 18px;	}	
-
-		@media (min-width: 768px) { font-size: 26px;
-			margin: -1px 0 25px;
-			margin-left: -10px;
-				&--m-b-small { margin-bottom: 20px;}
-				&--m-top-small {
-					margin-top: 20px;
-					margin-bottom: -32px; 
-					margin-right: 18px; } } }
+	@media (min-width: 768px) {
+	margin-left: 74px; 
+	margin-bottom: 112px;
+	 } 
+	@media (min-width: 1200px) {
+	font-size: 120px; 
+	margin-top: 0;
+	margin-bottom: 171px;
+	margin-right: 171px;
+	
+	 } }
 .heading--medium { font-size: 24px;
 			line-height: 28px;
 			margin: 15px 1px 40px;	@media (min-width: 1200px) {  } }

@@ -1,0 +1,38 @@
+.service__circle {
+ 	position: relative;	
+	width: 128px;	
+	height: 128px;	
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-color: @red-circle;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	&--branding { margin-top: 2px;
+				margin-bottom: 2px; }
+
+ @media (min-width: 768px) {
+ 	width: 245px;
+ 	height: 245px; 
+ 	
+&--branding  { 
+	 margin-top: -11px;
+	 margin-bottom: -12px; } } 
+
+img { 	position: absolute;	
+		display: inline-block;
+		height: 50%;	
+		width: 50%;	
+		left: 49%;
+		top: 51%;
+		transform: translate(-50%, -50%);
+		padding: 0;
+		margin: 0; 
+		max-height: 700px;}
+												 
+			&--development { img { height: 33%; width: 44%; } } 
+			&--design { img { height: 35%; width: 41%; 	} }
+			&--branding {img {top: 49%; height: 26%; width: 39%; } } 
+			&--research { img { height: 41%; width: 43%;  } } 
+	 @media (min-width: 1200px) {
+	 	 		&--branding { margin-top: 0px; margin-bottom: 0px;} }  }

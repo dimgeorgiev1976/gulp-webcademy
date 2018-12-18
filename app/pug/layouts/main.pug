@@ -25,6 +25,10 @@ head
 	link(rel="stylesheet", href="fonts/Museo_Sans/stylesheet.css")
 	<!-- endbuild -->
 
+	<!-- build:cssCustom css/vendor.css -->
+	link(rel="stylesheet", href="fonts/Museo/stylesheet.css")
+	<!-- endbuild -->
+
 	<!-- build:cssVendor css/vendor.css -->
 	link(rel="stylesheet", href="fonts/font-awesome-4.7.0/css/font-awesome.min.css")
 	<!-- endbuild -->
@@ -48,6 +52,7 @@ head
 body(class=pageClass)
 	include ../modules/header.pug
 	include ../modules/card.pug
+	include ../modules/service.pug
 	
 	block content
 

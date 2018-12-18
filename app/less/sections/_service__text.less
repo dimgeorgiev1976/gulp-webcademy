@@ -1,0 +1,50 @@
+.service__text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  &--development, &--design, &--branding, &--research {
+
+  }
+
+  &--development{ margin-left:-6px ;  }
+  &--design{ margin-left: -6px; }
+  &--branding {margin-left: -9px; margin-top: 4px; }
+  &--research {margin-left: -11px; margin-top: 6px;
+  letter-spacing: 0.4px; }
+
+    @media (min-width: 768px){
+		  		&--development, &--design, &--branding, &--research  {
+		  		 margin-left: 12px;
+		  		 margin-bottom: 24px;   }
+	       &--development { }
+	       &--design { }
+	       &--branding { margin-top: 4px; }
+	       &--research { margin-left: 8px; margin-top: 0px; } }
+  	 @media (min-width: 1200px){
+		  		margin-left: auto;	
+		  		margin-top: 71px; }  }  
+p.service__specs { 
+		margin-right: auto;
+		font-family: 'Museo Sans Cyrl 300';
+		font-size: 38px;
+		font-weight: normal;
+		font-style: normal;
+		color: @grey-heading;
+		line-height: 1; 
+		margin-left: 10px;
+		
+	    @media (min-width: 768px){
+		  	  	font-size: 40px; }
+		@media (min-width: 1200px){
+		margin-left: auto;	
+	   
+	     &--development {
+		 margin-left: -37px;
+	     margin-right: -89px;} 
+	     &--design{
+	     	margin-left: 59px; }  
+	     	&--branding {
+	     		margin-left: 40px;}
+	     		&--research {	
+	     			margin-left: 13px; } } }
+		
