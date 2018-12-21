@@ -1,0 +1,95 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ *  Default theme - Owl Carousel CSS File
+ */
+.owl-one .owl-nav {
+    margin-top: 10px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.owl-one .owl-nav[class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.owl-one .owl-nav [class*='owl-']:hover {
+    background: #869791;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.owl-one .owl-nav .disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.owl-one .owl-nav.disabled+.owl-dots {
+    margin-top: 11px;
+    display: block;
+    margin-right: 10px;
+}
+
+.owl-one .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.owl-one .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+
+    }
+
+ .owl-dot--new span{
+     position: absolute;
+    bottom: 0.1%;
+    left: 48.5%;
+    width: 20px;
+    height: 20px;
+    margin: 5px 11px;
+    margin-bottom: 179px;
+    padding: 0;
+    background-color: @dark-dots;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px; 
+    cursor: pointer;
+    z-index: 5;
+
+    &:hover, &:focus {
+             background-color: #869791;
+            box-shadow: 0px 0px 40px rgba(72, 119, 159, 1); 
+            }  } 
+.owl-one .owl-dots .owl-dot span {
+    width: 20px;
+    height: 20px;
+    margin: 5px 49px;
+    margin-right: 11px;
+    margin-bottom: 176px;
+    background-color: @dark-dots;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+}
+
+.owl-one .owl-dots  .owl-dot.active span,
+.owl-one .owl-dots .owl-dot .owl-dot--new .owl-dot--new:hover span {
+    background: #869791;
+}
+.owl-dot--new.active {
+    background: #869791;
+}
