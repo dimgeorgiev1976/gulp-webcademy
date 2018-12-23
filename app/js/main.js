@@ -6,16 +6,15 @@ $(document).ready(function(){
    one.owlCarousel({
       loop:true,
       margin:20,
-      dotsEach:2,
+      dotsEach:5,
       smartSpeed:700,
       responsive:{
           0:{ items:1},
-          768:{ items:3,
+          768:{ items:1,
             margin:50},
           1000:{ items:4 } 
            }
       });
-      
      
         var owl = $('.owl-carousel');
         owl.owlCarousel();
@@ -23,15 +22,15 @@ $(document).ready(function(){
         $('#owl-prev').click(function() {
             owl.trigger('next.owl.carousel',[1000]);
     });
-
+       var navToggleButton = $("#owl-prev a");
      $("#owl-prev a").click(function() {
         $("#owl-prev a").removeClass('active');
         $(this).addClass('active');
       });
-     var navToggleButton = $("#owl-prev a");
+    
 
        
-     Функция для анимация иконки 
+     // Функция для анимация иконки 
       function navButtonToggle(){
         if (navToggleButton.hasClass("active")) {
           navToggleButton.removeClass("active");
