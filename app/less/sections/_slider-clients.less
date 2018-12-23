@@ -1,0 +1,63 @@
+
+@import "../base/_variables.less";
+
+.slider__img {
+		display: table;
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+
+	
+		a {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+	 	    background-image: url("../img/bg/vegan_svg.png");
+    		background-repeat: no-repeat;
+    		width: 112px;
+    		height: 112px;
+			}	 
+	
+  		a.slider__img--tvs {
+			background-position: 55.138% 44.505%;
+			width: 284px;
+			height: 284px;
+				}	
+  			a.slider__img--tpg {
+			background-position: 0.158% 59.196%;
+			width: 0%;
+			height: 45%;
+				}
+			a.slider__img--pshe {
+			background-position: 102.044% 62.953%;
+			width: 284px;
+			height: 81px;
+				} 
+
+		@media (min-width: 768px){
+		height: 135px;
+		width: 80px;
+		display: table;
+		width: 100%;
+
+			// margin: 277px auto 144px;
+			
+			a.slider__img--tpg {
+	 	    background-image: url("../img/bg/logo-tpg.png");
+			background-position: 62.538% 44.505%;
+	 	    
+			}
+			a.slider__img--tvs {
+	 	    background-image: url("../img/bg/logo-tvs.png");
+			background-position: 62.938% 44.505%;
+	 	    
+			} 
+	 		a.slider__img--pshe {
+	  	    background-image: url("../img/bg/logo-pshe.png");
+			background-position: 57.94% 43.953%;
+			} 
+			&--margin-top {
+				margin-top: 112px;
+			}
+		} }
+	
