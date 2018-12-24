@@ -33,15 +33,6 @@
     opacity: 0.5;
     cursor: default;
 }
-
-.owl-one .owl-nav.disabled+.owl-dots {
-    margin-top: 11px;
-    display: block;
-    margin-right: 10px;
-    @media (min-width: 768px){
-        display: none; 
-        } }
-
 .owl-one .owl-dots {
     text-align: center;
     -webkit-tap-highlight-color: transparent;
@@ -56,12 +47,12 @@
 
  .owl-dot--new span{
      position: absolute;
-    bottom: 0.1%;
+    bottom: -34.5%;
     left: 48.5%;
     width: 20px;
     height: 20px;
     margin: 5px 11px;
-    margin-bottom: 179px;
+    margin-bottom: 180px;
     padding: 0;
     background-color: @dark-dots;
     display: block;
@@ -76,15 +67,20 @@
             box-shadow: 0px 0px 40px rgba(72, 119, 159, 1); 
             }  }
             
-.owl-dot--new {
-    @media (min-width: 768px){
-  display: none;  } } 
+.owl-dot--new { @media (min-width: 768px){  display: none;  } } 
+    
+.owl-one .owl-nav.disabled+.owl-dots {
+      margin-top: 84px;
+      display: block;
+      margin-right: 10px;
+      @media (min-width: 768px){
+          display: none;    } }
 .owl-one .owl-dots .owl-dot span {
     width: 20px;
     height: 20px;
-    margin: 5px 106px;
-    margin-right: 11px;
-    margin-bottom: 176px;
+    margin: 5px 48px;
+    margin-right: 12px;
+    margin-bottom: 10px;
     background-color: @dark-dots;
     display: block;
     -webkit-backface-visibility: visible;
@@ -100,10 +96,14 @@
     background: #869791; }
 
 .owl-carousel .owl-item {
+    display: block;
+    width: 50%;
+    height: auto;
      @media (min-width: 768px){
                 } }
 .owl-carousel *  {
           background-color: @yellow; 
+          margin-top: 0px;
 
      @media (min-width: 768px){
           background-color: #fff; 
@@ -124,4 +124,18 @@ div.owl-wrapper {
                 }   }   
 div.owl-wrapper * {  
     background-color: @green-bg;
+
+}
+
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+.owl-theme .owl-controls .owl-page span {
+    background: none repeat scroll 0 0 #869791;
+    border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
 }

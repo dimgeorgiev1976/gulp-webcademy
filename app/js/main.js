@@ -6,15 +6,16 @@ $(document).ready(function(){
    one.owlCarousel({
       loop:true,
       margin:20,
-      dotsEach:5,
+      dotsEach:2,
       smartSpeed:700,
       responsive:{
           0:{ items:1},
-          768:{ items:1,
+          768:{ items:3,
             margin:50},
           1000:{ items:4 } 
            }
       });
+      
      
         var owl = $('.owl-carousel');
         owl.owlCarousel();
