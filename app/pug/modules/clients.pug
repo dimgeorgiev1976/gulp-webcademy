@@ -3,16 +3,32 @@
 	.container
 		.row
 			.col
-				.owl-carousel.owl-one#owl-one.owl-wrapper
-					.slider__img 
-						a.slider__img--tpg
-					.slider__img.slider__img--margin-top
-						a.slider__img--tvs
-					.slider__img.slider__img--margin-top
-						a.slider__img--pshe
-				#owl-prev
-					a.owl-dot--new
-						span
+				.owl-wrapper.shown
+					#owl-one.owl-one.owl-carousel
+						.slider__img 
+							a.slider__img--tpg
+						.slider__img.slider__img--margin-top
+							a.slider__img--tvs
+						.slider__img.slider__img--margin-top
+							a.slider__img--pshe
+					#owl-dot
+						a.owl-dot--new
+							span
+				.mobile-only.shown
+					#owl-two.owl-two.owl-carousel
+						.mobile-only-after-click
+							.slider__img
+								a.slider__img--tpg
+							.slider__img.slider__img--margin-top
+								a.slider__img--tvs
+							.slider__img.slider__img--margin-top
+								a.slider__img--pshe
+						#owl-prev
+							a.owl-dot--new
+								span
+						#owl-next
+							a.owl-dot--new
+								span
 	.row.justify-content-center
 		.col-xl-3
 			a.button.button-down--clients

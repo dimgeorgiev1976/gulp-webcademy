@@ -15,7 +15,7 @@
 <!-- build:cssVendor css/vendor.css -->
   <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/><!-- endbuild -->
 <!-- build:cssVendor css/vendor.css -->
-  <link rel="stylesheet" href="libs/owl.carousel/assets/owl.carousel.min.css"/><!-- endbuild -->
+  <link rel="stylesheet" href="libs/owl.carousel/assets/owl.carousel.css"/><!-- endbuild -->
 <!-- build:cssVendor css/vendor.css -->
   <link rel="stylesheet" href="libs/bootstrap-4-grid/grid.min.css"/><!-- endbuild -->
 <!--[if lt IE 9]>
@@ -141,33 +141,30 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="owl-carousel owl-one owl-wrapper" id="owl-one">
-            <div class="slider__img"> <a class="slider__img--tpg"></a></div>
-            <div class="slider__img slider__img--margin-top"><a class="slider__img--tvs"></a></div>
-            <div class="slider__img slider__img--margin-top"><a class="slider__img--pshe"></a></div>
+          <div class="owl-wrapper shown">
+            <div class="owl-one owl-carousel" id="owl-one">
+              <div class="slider__img"> <a class="slider__img--tpg"></a></div>
+              <div class="slider__img slider__img--margin-top"><a class="slider__img--tvs"></a></div>
+              <div class="slider__img slider__img--margin-top"><a class="slider__img--pshe"></a></div>
+            </div>
+            <div id="owl-dot"><a class="owl-dot--new"><span></span></a></div>
           </div>
-          <div id="owl-prev"><a class="owl-dot--new"><span></span></a></div>
+          <div class="mobile-only shown">
+            <div class="owl-two owl-carousel" id="owl-two">
+              <div class="mobile-only-after-click">
+                <div class="slider__img"><a class="slider__img--tpg"></a></div>
+                <div class="slider__img slider__img--margin-top"><a class="slider__img--tvs"></a></div>
+                <div class="slider__img slider__img--margin-top"><a class="slider__img--pshe"></a></div>
+              </div>
+              <div id="owl-prev"><a class="owl-dot--new"><span></span></a></div>
+              <div id="owl-next"><a class="owl-dot--new"><span></span></a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-xl-3"><a class="button button-down--clients"><img src="img/icons/ghost-btn-black.png" alt="button-black.png"/></a></div>
-    </div>
-  </div>
-  <!-- How to find us-->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xl-6">
-        <div class="block">How to find us</div>
-      </div>
-    </div>
-  </div>
-  <div class="block">Карта</div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-xl-3">
-        <div class="block">button</div>
-      </div>
     </div>
   </div>
   <!-- Contacts-->
