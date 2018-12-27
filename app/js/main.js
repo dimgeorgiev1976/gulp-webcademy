@@ -10,19 +10,41 @@ $(document).ready(function(){
       smartSpeed:700,
       responsive:{
           0:{ items:1},
-          768:{ items:3,
-            margin:50},
-          1000:{ items:4 } 
+          768:{ items:1,
+            margin:100},
+          1200:{ items:2,
+            nav:true,
+           navText : ["", ""],
+              } 
            }
       });
-      
-     
+    two.owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      navSpeed:700,
+      navText : ["", ""],
+      responsive:{
+          0:{  items:1
+          },
+          768:{ items:2
+          },
+          1200:{ items:4
+          }
+            }
+        });
+
+
+        // Go to the next item
+        
         var owl = $('.owl-carousel');
         owl.owlCarousel();
-        // Go to the next item
-        $('#owl-prev').click(function() {
+
+        $('#owl-dot').click(function() {
             owl.trigger('next.owl.carousel',[1000]);
     });
+
+
        var navToggleButton = $("#owl-prev a");
      $("#owl-prev a").click(function() {
         $("#owl-prev a").removeClass('active');
@@ -30,7 +52,6 @@ $(document).ready(function(){
       });
     
 
-       
      // Функция для анимация иконки 
       function navButtonToggle(){
         if (navToggleButton.hasClass("active")) {
