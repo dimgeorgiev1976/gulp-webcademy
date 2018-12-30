@@ -14,20 +14,30 @@
 		&:active {color: transparent;outline: none;
   			box-shadow: 0px 0px 40px rgba(72, 119, 159, 1);	} }
 .button-down {
-
-			&--clients {margin-left: 24px;
-			margin-top: 168px;
-		img {
-			width: 90px;
-			height: 90px; 
-		}		
+	&--location {margin-left: 24px;
+	margin-top: 113px;
+	@media (min-width: 768px) {  
+	    margin-left: 77px;
+		margin-top: 381px;} 
+			
+	@media (min-width: 1200px) {
+	   		margin-right: 178px;
+			margin-top: 284px;}
+	img {
+		width: 108px;
+		height: 108px; 	} 	 }	
+	&--clients {margin-left: 24px;
+	margin-top: 168px;
+	img {
+		width: 90px;
+		height: 90px; } 
 	@media (min-width: 768px) {  
 		    margin-left: 77px;
 			margin-top: 381px;} 
 				
 	@media (min-width: 1200px) {
 	   		margin-right: 178px;
-			margin-top: 284px;} } }
+			margin-top: 284px;} }  }
 			    		
 .button-down--service { 
 		margin-left: 24px;

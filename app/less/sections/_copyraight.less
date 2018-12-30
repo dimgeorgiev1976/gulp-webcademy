@@ -1,0 +1,77 @@
+.copyraight {
+	background-color: @grey-card;
+	padding-top: 59px;
+	padding-bottom: 116px;
+		&:hover, &:focus {
+			color: @yellow;
+			text-decoration: none;
+			-webkit-transition: all 0.3s ease-out;
+			   -moz-transition: all 0.3s ease-out;
+			    -ms-transition: all 0.3s ease-out;
+			     -o-transition: all 0.3s ease-out;
+			        transition: all 0.3s ease-out;
+					}
+			&:active {
+				color: @grey;
+  				box-shadow: 0px 0px 40px rgba(72, 119, 159, 1);
+				border-bottom: 1px solid @grey;
+				text-decoration: none;
+				outline-style: none;
+				outline: none;
+				}
+		span {
+			&:hover, &:focus {
+			color: @yellow;
+			text-decoration: none;	
+			outline-style: none;
+			-webkit-transition: all 0.3s ease-out;
+			   -moz-transition: all 0.3s ease-out;
+			    -ms-transition: all 0.3s ease-out;
+			     -o-transition: all 0.3s ease-out;
+			        transition: all 0.3s ease-out;
+				}
+			}
+		&:last-child{
+	margin-bottom: 0;
+}
+		@media (min-width: 768px){
+		}
+		@media (min-width: 1200px){
+			margin-bottom: 22px;			
+		}
+	}
+.flex-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 12px;
+}
+
+i.fa.fa-phone {
+	color: @dark-dots;
+	font-size: 32px;
+}
+i.fa.fa-envelope-o {
+	color: @grey-email;
+	font-size: 32px;
+}
+
+a.copyraight__tel,
+a.copyraight__mail {
+	font-family: 'Museo Sans Cyrl 300';	
+	font-weight: 300;
+	font-style: normal; 
+	font-size: 32px;
+	color: @grey-numbers;
+	text-decoration: none;
+		}		
+a.copyraight__tel,a.copyraight__mail,i.fa.fa-phone,
+i.fa.fa-envelope-o {
+	display: flex;
+	margin: auto; }
+a.copyraight__tel {
+	margin-bottom: 19px;
+	margin-left: 7px;
+} 
+	
+

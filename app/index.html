@@ -167,35 +167,42 @@
       <div class="col-xl-3"><a class="button button-down--clients"><img src="img/icons/ghost-btn-black.png" alt="button-black.png"/></a></div>
     </div>
   </div>
-  <!-- Contacts-->
-  <div class="Contacts">
+  <div class="location">
+    <div class="heading heading--location">Find us</div>
+    <div class="map desk-three-forth" id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3554627671806!2d-0.07654918469092785!3d51.525039817234905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d6cbe841cb7%3A0x5c8fa314dd4429c6!2sGeek+Label!5e0!3m2!1sen!2sbg!4v1546078715854" width="600" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    <div class="row justify-content-center">
+      <div class="col-xl-3"><a class="button button-down--location"><img src="img/bg/btn-red.png" alt="button-red.png"/></a></div>
+    </div>
+  </div>
+  <div class="contact">
+    <div class="heading heading--contact">Contact</div>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-xl-4">
-          <div class="block">Contacts</div>
+        <div id="contact-area">
+          <form method="post" action="">
+            <input class="contact-form__input" type="text" name="name" id="name" placeholder="Name"/>
+            <input class="contact-form__input" type="text" name="email" id="email" placeholder="Email"/>
+            <textarea class="contact-form__textarea" type="text" placeholder="Message"></textarea>
+            <input class="submit-button" type="submit" name="submit" value="Send Message!"/>
+          </form>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="copyraight">
+    <div class="flex-wrapper">
       <div class="row justify-content-center">
-        <div class="col-xl-4">
-          <div class="block">contact-form</div>
-        </div>
+        <div class="col-12"><i class="fa fa-phone" aria-hidden="true"><a class="copyraight__tel" href="#">&nbsp01923 220121</a></i></div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-xl-4">
-          <div class="block">button</div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-xl-3">
-          <div class="block">copyraight</div>
-        </div>
+        <div class="col-12"><i class="fa fa-envelope-o" aria-hidden="true"><a class="copyraight__mail" href="#">&nbsp  info@compucorp.co.uk</a></i></div>
       </div>
     </div>
   </div><!-- build:jsLibs js/libs.js -->
   <script src="libs/jquery/jquery.min.js"></script><!-- endbuild -->
-  <footer>
-    <h2>This is Footer.pug</h2>
-  </footer><script src="libs/owl.carousel/owl.carousel.min.js"></script><!-- build:jsVendor js/vendor.js --><!-- endbuild -->
+  <div class="footer"></div><script src="libs/owl.carousel/owl.carousel.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/googleMap.js"></script><!-- build:jsVendor js/vendor.js --><!-- endbuild -->
 <!-- build:jsMain js/main.js -->
   <script src="js/main.js"></script><!-- endbuild -->
 </body>
