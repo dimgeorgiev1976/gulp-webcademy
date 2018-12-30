@@ -1,16 +1,18 @@
 .copyraight {
 	background-color: @grey-card;
-	padding-top: 59px;
+	padding-top: 52px;
 	padding-bottom: 116px;
-		&:hover, &:focus {
-			color: @yellow;
+    i.fa.fa-phone, 
+	i.fa.fa-envelope-o {
+	&:hover, &:focus {
+			color: @blue-border;
 			text-decoration: none;
 			-webkit-transition: all 0.3s ease-out;
 			   -moz-transition: all 0.3s ease-out;
 			    -ms-transition: all 0.3s ease-out;
 			     -o-transition: all 0.3s ease-out;
 			        transition: all 0.3s ease-out;
-					}
+					} 
 			&:active {
 				color: @grey;
   				box-shadow: 0px 0px 40px rgba(72, 119, 159, 1);
@@ -18,22 +20,11 @@
 				text-decoration: none;
 				outline-style: none;
 				outline: none;
-				}
-		span {
-			&:hover, &:focus {
-			color: @yellow;
-			text-decoration: none;	
-			outline-style: none;
-			-webkit-transition: all 0.3s ease-out;
-			   -moz-transition: all 0.3s ease-out;
-			    -ms-transition: all 0.3s ease-out;
-			     -o-transition: all 0.3s ease-out;
-			        transition: all 0.3s ease-out;
-				}
+				} }
+		
+				&:last-child{
+			margin-bottom: 0; 
 			}
-		&:last-child{
-	margin-bottom: 0;
-}
 		@media (min-width: 768px){
 		}
 		@media (min-width: 1200px){
@@ -46,6 +37,7 @@
 	align-items: center;
 	margin-right: 12px;
 }
+
 
 i.fa.fa-phone {
 	color: @dark-dots;
@@ -64,6 +56,11 @@ a.copyraight__mail {
 	font-size: 32px;
 	color: @grey-numbers;
 	text-decoration: none;
+	 &:hover, &:focus, &:active {
+		 	color: @blue-border;
+			text-decoration: none;	
+			outline-style: none;
+			}
 		}		
 a.copyraight__tel,a.copyraight__mail,i.fa.fa-phone,
 i.fa.fa-envelope-o {
