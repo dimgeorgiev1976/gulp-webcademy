@@ -1,0 +1,47 @@
+Label.error {
+	background-color: @pinkErrors;
+	position: relative;
+	display: block;
+	border-radius: 4px;
+	color: #FFF;
+	padding: 5px 15px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	margin-top: -1px;
+	
+		&:last-child {
+			margin-top: -6px;
+	}
+
+	@media (min-width: 768px){
+			border-radius: 8px;
+			// margin-bottom: 15px;
+			// margin-top: 2px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 98%;
+		left: 40px;
+		margin-left: -8px;
+		width: 0;
+		height: 0;
+		border-bottom: @cornerSize solid @pinkErrors;
+		border-right: @cornerSize solid transparent;
+		border-left: @cornerSize solid transparent;
+			}
+		}
+
+.contact-form__success {
+	background-color: #fff;
+	color: @greenSucsses;
+	position: relative;
+	display: block;
+	border-radius: 8px;
+	padding: 5px 15px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	margin-top: 2px;
+	font-size: 20px;
+		}
