@@ -1,11 +1,12 @@
 .contact
 	.heading.heading--contact Contact
 	.row.justify-content-center
-		div#contact-area
-			form(method='post',action='').contact-form__wrapper
-				input(type='text',name='name',id='name',class='contact-form__input', placeholder='Name')
-				input(type='text',name='email',id='email',class='contact-form__input', placeholder='Email')
-				textarea(type='text',class='contact-form__textarea', placeholder='Message')
-				input(type='submit',name='submit',value='Send Message!').submit-button
+		.col-md-8.col-xl-10
+			div#contact-area
+				form(method='post',action='').contact-form__wrapper
+					input(type='text',name='name',id='name',class='contact-form__input', placeholder='Name')
+					input(type='text',name='email',id='email',class='contact-form__input', placeholder='Email')
+					textarea(type='text',class='contact-form__textarea', placeholder='Message')
+					input(type='submit',name='submit',value='Send Message!',class='submit-button')
 
 	
