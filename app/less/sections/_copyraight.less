@@ -1,9 +1,21 @@
+
+.flex-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: 15px;
+	@media (min-width: 768px){
+			margin-right: 11px;}
+	@media (min-width: 1200px){
+			margin-right: 10px; }
+}	
 .copyraight {
 	background-color: @grey-card;
 	padding-top: 52px;
-	padding-bottom: 116px;
-    i.fa.fa-phone, 
-	i.fa.fa-envelope-o {
+	padding-bottom: 167px;
+    i.fa.fa-phone, i.fa.fa-envelope-o,
+	a.copyraight__tel, a.copyraight__mail,
+	a.copyraight__call  {
 	&:hover, &:focus {
 			color: @blue-border;
 			text-decoration: none;
@@ -21,24 +33,23 @@
 				outline-style: none;
 				outline: none;
 				} }
-		
-				&:last-child{
-			margin-bottom: 0; 
-			}
-		@media (min-width: 768px){
-		}
+
 		@media (min-width: 1200px){
-			margin-bottom: 22px;			
-		}
-	}
-.flex-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-right: 12px;
-}
-
-
+			margin-bottom: 22px; }
+	}	
+a.copyraight__tel,a.copyraight__mail,
+i.fa.fa-phone,
+i.fa.fa-envelope-o {
+		display: flex;
+		margin: auto;
+		margin-left: 0px;
+	 @media (min-width: 768px){
+		  letter-spacing: 0.1px;
+		  margin-left: -1px; 
+		  	}	
+	 @media (min-width: 1200px){
+		  display: none; } 
+		  	}	
 i.fa.fa-phone {
 	color: @dark-dots;
 	font-size: 32px;
@@ -46,31 +57,39 @@ i.fa.fa-phone {
 i.fa.fa-envelope-o {
 	color: @grey-email;
 	font-size: 32px;
-}
-
+}	
 a.copyraight__tel,
-a.copyraight__mail {
+a.copyraight__mail,
+a.copyraight__call {
 	font-family: 'Museo Sans Cyrl 300';	
 	font-weight: 300;
 	font-style: normal; 
 	font-size: 32px;
 	color: @grey-numbers;
 	text-decoration: none;
-	 &:hover, &:focus, &:active {
-		 	color: @blue-border;
-			text-decoration: none;	
-			outline-style: none;
-			} }
-	
-a.copyraight__tel,a.copyraight__mail,i.fa.fa-phone,
-i.fa.fa-envelope-o {
-		display: flex;
-		margin: auto;
-	 @media (min-width: 768px){
-		  letter-spacing: 0.23px; } 
-		  	}	
+	 }
 a.copyraight__tel {
+	margin-left: 9px;
 	margin-bottom: 20px;
-	margin-left: 7px; } 
+	 }
+a.copyraight__mail {
+	margin-left: 0;
+	letter-spacing: 0.25px;
+} 
+a.copyraight__call 	{
+
+	 @media (min-width: 320px){
+		 display: none;
+		  	}	
+	 @media (min-width: 1200px){
+		  display: flex;
+		  margin: auto;
+		  font-size: 40px;
+		  color: @grey-heading;
+		  margin-left: 4px;
+		  letter-spacing: 0.25px;
+		   } 
+	 } 
+
 	
 
