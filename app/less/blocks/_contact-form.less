@@ -1,28 +1,29 @@
 
 @import "../base/_variables.less";
-
 @import "../blocks/_contact-form__input.less";
 
-.contact {
-	// background-color: @grey-card;
-	background-color: @pinkErrors;
-	padding: 21px 43px;
-	}
 #contact-area {
-
 }
+.contact {
+	background-color: @grey-card;
+	// background-color: @pinkErrors;
+	padding: 22px 43px;
+@media (min-width: 768px) {
+	padding: 23px 43px;
+	padding-bottom: 64px;
+		}  
+	}
+
 .contact-form__wrapper {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center; 
 	font-size: 38px; 
 	margin-top: 81px;
 	@media (min-width: 768px) {
+		margin-top: 73px;
 			}  }
-.contact-form__wrapper * {
-	background-color: @green-bg;
-}
-
 .submit-button {
 	width: 100%;
 	padding: 34px 109px 32px;
@@ -56,8 +57,9 @@
 			}
 
 	@media (min-width: 768px){
-			font-size: 20px;
-			padding: 8px 47px 12px;
+			font-size: 38px;
+			padding: 33px 263px 32px;
+			padding-left: 256px;
 			display: inline-block;
 			width: auto;
 	}
