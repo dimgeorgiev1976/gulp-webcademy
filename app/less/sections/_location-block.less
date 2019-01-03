@@ -1,0 +1,28 @@
+.contacts-block {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    
+    width: 497px;
+    height: 137px;
+    // background-color: rgba(252, 252, 252, 0.8);
+    background-color: @pinkErrors;
+    font-style: normal;
+    margin-bottom: 250px;
+    text-align: center;
+    padding: 25px;
+        &:before {
+            display: block;
+            position: absolute;
+            border-left: 25px solid transparent;
+            border-bottom: 25px solid @pinkErrors;
+            border-right: 25px solid transparent;
+            height: 0px;
+            width: 0px;
+            content:'';
+            top: -10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+                       } 
+                         }
