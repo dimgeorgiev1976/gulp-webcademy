@@ -3,10 +3,17 @@
 	.row.justify-content-center
 		.col-md-8.col-xl-10
 			div#contact-area
-				form(method='post',action='').contact-form__wrapper
+				form(class='contact-form', id='contact-form').contact-form__wrapper
+					// Hidden Required Fields
+					input(type='hidden',name='project_name',value="Geek-Label")
+					input(type='hidden',name='form_from',value="compucorp@domcomo.000webhostapp.co.uk")
+					input(type='hidden',name='admin_email',value="dim.georgiev1976@yandex.com")
+					input(type='hidden',name='form_subject',id='name',value="Сообщение с сайта")
+					// END Hidden Required Fields	
 					input(type='text',name='name',id='name',class='contact-form__input', placeholder='Name')
 					input(type='text',name='email',id='email',class='contact-form__input', placeholder='Email')
-					textarea(type='text',class='contact-form__textarea', placeholder='Message')
-					input(type='submit',name='submit',value='Send Message!',class='submit-button')
+					textarea(type='text',class='contact-form__textarea',name='message' placeholder='Message')
+					input(type='submit',name='submit',value='Send Message!',class="contact-form__submit")
+			#answer
 
 	

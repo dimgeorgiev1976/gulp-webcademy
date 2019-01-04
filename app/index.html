@@ -200,13 +200,20 @@
     <div class="row justify-content-center">
       <div class="col-md-8 col-xl-10">
         <div id="contact-area">
-          <form class="contact-form__wrapper" method="post" action="">
+          <form class="contact-form contact-form__wrapper" id="contact-form">
+            <!-- Hidden Required Fields-->
+            <input type="hidden" name="project_name" value="Geek-Label"/>
+            <input type="hidden" name="form_from" value="compucorp@domcomo.000webhostapp.co.uk"/>
+            <input type="hidden" name="admin_email" value="dim.georgiev1976@yandex.com"/>
+            <input type="hidden" name="form_subject" id="name" value="Сообщение с сайта"/>
+            <!-- END Hidden Required Fields	-->
             <input class="contact-form__input" type="text" name="name" id="name" placeholder="Name"/>
             <input class="contact-form__input" type="text" name="email" id="email" placeholder="Email"/>
-            <textarea class="contact-form__textarea" type="text" placeholder="Message"></textarea>
-            <input class="submit-button" type="submit" name="submit" value="Send Message!"/>
+            <textarea class="contact-form__textarea" type="text" name="message" placeholder="Message"></textarea>
+            <input class="contact-form__submit" type="submit" name="submit" value="Send Message!"/>
           </form>
         </div>
+        <div id="answer"></div>
       </div>
     </div>
   </div>
@@ -223,10 +230,13 @@
       </div>
     </div>
   </div><!-- build:jsLibs js/libs.js -->
-  <script src="libs/jquery/jquery.min.js"></script><!-- endbuild -->
+  <script src="libs/jquery/jquery.min.js"></script><!-- endbuild -->	
+<!-- build:jsLibs js/libs.js -->
+  <script src="libs/jquery-validation/jquery.validate.min.js"></script><!-- endbuild -->
   <div class="footer"></div><script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxAR2DIRJdRY-fCAp3soKVn7CGEYixjDI&callback=initMap"></script>
 <script src="libs/owl.carousel/owl.carousel.min.js"></script>
-<script src="js/googleMap.js"></script><!-- build:jsVendor js/vendor.js --><!-- endbuild -->
+<script src="js/googleMap.js"></script>
+<script src="js/validation-form.js"></script><!-- build:jsVendor js/vendor.js --><!-- endbuild -->
 <!-- build:jsMain js/main.js -->
   <script src="js/main.js"></script><!-- endbuild -->
 </body>
