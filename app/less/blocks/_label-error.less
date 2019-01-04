@@ -7,18 +7,17 @@ Label.error {
 	padding: 5px 15px;
 	font-weight: bold;
 	margin-bottom: 15px;
-	margin-top: -1px;
-	
+	margin-top: -29px;
+	display: flex;
+	margin-right: auto;
 		&:last-child {
 			margin-top: -6px;
 	}
-
 	@media (min-width: 768px){
 			border-radius: 8px;
 			// margin-bottom: 15px;
 			// margin-top: 2px;
 	}
-
 	&:after {
 		content: "";
 		position: absolute;
@@ -34,7 +33,7 @@ Label.error {
 		}
 
 .contact-form__success {
-	background-color: #fff;
+	background-color:  @grey-card;
 	color: @greenSucsses;
 	position: relative;
 	display: block;
