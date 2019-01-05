@@ -1,45 +1,59 @@
 .service
-	.container
-		h2.heading.heading--services Services
-		.row.justify-content-center
-			.wrapper__service
-				.col-xl-3
-					.service__card
-						.col-4.col-md-5.col-xl-12
-							.service__circle.service__circle--development
-								img(src='img/icons/web-dev.png' alt="web-development")
-						.col-9.col-md-8.col-xl-12
-							.service__text.service__text--development
-								p.service__specs.service__specs--development
-									| Web Development
-				.col-xl-3
-					.service__card
-						.col-4.col-md-5.col-xl-12
-							.service__circle.service__circle--design
-								img(src='img/icons/design.png' alt="design")
-						.col-8.col-md-8.col-xl-12
-							.service__text.service__text--design 
-								p.service__specs.service__specs--design
-									| Design
-				.col-xl-3
-					.service__card
-						.col-4.col-md-5.col-xl-12
-							.service__circle.service__circle--branding
-								img(src='img/icons/branding.png' alt="branding")
-						.col-8.col-md-8.col-xl-12
-							.service__text.service__text--branding 
-								p.service__specs.service__specs--branding
-									| Branding
-				.col-xl-3
-					.service__card
-						.col-4.col-md-5.col-xl-12
-							.service__circle.service__circle--research
-								img(src='img/icons/ux-research.png' alt="ux-research")
-						.col-8.col-md-8.col-xl-12
-							.service__text.service__text--research 
-								p.service__specs.service__specs--research
-									| UX Research
-		.row.justify-content-center
-				.col-xl-3
-					a.button.button-down--service
-						img(src='img/icons/ghost-btn-black.png' alt='button-black.png')
+	h2.heading.heading--services Services
+	.row.justify-content-center
+		.service__circle-wrapper
+			.service__card
+				.col-4.col-md-4.col-xl-3
+					.service__circle.service__circle--development
+						img(src='img/icons/web-dev.png' alt="web-development")
+				.col-8.col-md-8.hidden
+					.service__text.service__text--development
+						p.service__specs.service__specs--development
+							span Web Development
+			.service__card
+				.col-4.col-md-4.col-xl-3
+					.service__circle.service__circle--design
+						img(src='img/icons/design.png' alt="design")
+				.col-8.col-md-8.hidden
+					.service__text.service__text--design 
+						p.service__specs.service__specs--design
+							span Design
+			.service__card
+				.col-4.col-md-4.col-xl-3
+					.service__circle.service__circle--branding
+						img(src='img/icons/branding.png' alt="branding")
+				.col-8.col-md-8.hidden
+					.service__text.service__text--branding 
+						p.service__specs.service__specs--branding
+							span Branding
+			.service__card
+				.col-4.col-md-4.col-xl-3
+					.service__circle.service__circle--research
+						img(src='img/icons/ux-research.png' alt="ux-research")
+				.col-8.col-md-8.hidden
+					.service__text.service__text--research 
+						p.service__specs.service__specs--research
+							span UX Research
+	.row
+		.shown
+			.service__text-wrapper
+				.col-12.col-md-8.col-xl-5
+					.service__text.service__text--development
+						p.service__specs.service__specs--development
+							span Web Development
+				.col-12.col-md-8.col-xl-2
+					.service__text.service__text--design 
+						p.service__specs.service__specs--design
+							span Design
+				.col-12.col-md-8.col-xl-3
+					.service__text.service__text--branding 
+						p.service__specs.service__specs--branding
+							span Branding
+				.col-12.col-md-8.col-xl-4
+					.service__text.service__text--research 
+						p.service__specs.service__specs--research
+							span UX Research
+	.row.justify-content-center
+			.col-xl-3
+				a.button.button-down--service
+					img(src='img/icons/ghost-btn-black.png' alt='button-black.png')
