@@ -1,22 +1,32 @@
 
 .service__text {
-  &--development, &--design, &--branding, &--research {
-  }
+		margin-left: 32px;
+			 &--branding { 
+	       	margin-top: 40px;  }  
     @media (min-width: 768px){
-		  		  		  }
-	       &--development { }
-	       &--design { }
-	       &--branding { margin-top: 4px; }
-	       &--research { margin-left: 8px; margin-top: 0px; } 
+			&--development {
+				margin-left: 22px;
+				 }   
+	        &--design, &--branding, &--research {
+	       	margin-left: -13px; }
+	       	&--branding { 
+	       		margin-top: 21px;
+	       		}  }
   	 @media (min-width: 1200px){
-  	 			
-  	 	 		  	 }  } 
+  	 		&--development,	&--design {
+  	 	 		margin-left: -53px;  } 
+  	 	 	&--research, &--branding {
+  	 	 		margin-left: 55px;  }
+  	 	 		&--design {
+  	 	 		// margin-left: -64px;  
+  	 	 		}  }  }
   	 	 		  	 
 @media (min-width: 768px){
 	p.service__specs {
 	       		&--development, &--design, &--branding,
 	       		&--research {
-	       		margin-top: 10px;	
+	       		margin-top: 15px;
+	       		margin-left: 23px;	
 	       		} }  } 	 	 		  	 
 	p.service__specs { 
 			font-family: 'Museo Sans Cyrl 300';
@@ -33,48 +43,39 @@
 		  	  	font-size: 40px;
   	 				}
 	     &--development  {
-	     	@media (min-width: 768px){
-	     		span {
+	     	span {
+	     			margin-right: auto;
+	     			margin-left: auto;
+	       		@media (min-width: 768px){
 			     	margin-left: auto;
-			     	}  }   
-	     	@media (min-width: 1200px){
-			     	span {
-			     	margin-right: auto;
-			     	}  }  } 
+			     	}   
+		     	@media (min-width: 1200px){
+				     	margin-right: auto;
+				     	}  }  }
 	     &--design  {
- 	     	@media (min-width: 768px){
- 	     		span {
- 			     	margin-left: auto;
-     		     	margin-right: auto;
- 			     	}  }   
-	     	@media (min-width: 1200px){
-     		     	span {
-     		     	margin-right: auto;
-     		     	// margin-left: auto;
-     		     		}  }  }
+ 	     	span {
+	     		@media (min-width: 768px){
+			     	margin-right: auto;
+			     	}   
+		     	@media (min-width: 1200px){
+				     	margin-right: auto;
+				     	}  }  }
 	     &--branding {
-          	@media (min-width: 768px){
-          		span {
-     		     	margin-left: auto;
-     		     	margin-right: auto;
-     		     	}  }   	
-	     	@media (min-width: 1200px){
-     		     	span {
-     		     	margin-left: auto
-     		     	;
-     		     	}  }  }
-	     &--research  {
-     		@media (min-width: 768px){
-	     		span {
+          span {
+	     		@media (min-width: 768px){
+				     	margin-right: auto;
+			     	}   
+		     	@media (min-width: 1200px){
 			     	margin-left: auto;
-     		     	margin-right: auto;
-			     	}  }   
-		 	@media (min-width: 1200px){
-			     	span {
-			     	margin-left: 67px;
-			     		 
-			     		}  }  }  }
-		
+				     	}  }  }
+	     &--research  {
+     		span {
+	     		@media (min-width: 768px){
+				     	margin-right: auto;
+			     	}   
+		     	@media (min-width: 1200px){
+			     	margin-left: auto;
+				     	}  }  }  }
 @media screen and (max-width: 1199px) {
  .shown {
     display: none;
