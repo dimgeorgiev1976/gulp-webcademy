@@ -1,3 +1,6 @@
+
+
+$(document).ready(function(){
 // Функция initMap которая отрисует карту на странице
 function initMap() {
 	
@@ -85,9 +88,9 @@ function initMap() {
 	// Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
 	markerGeekLabel.addListener('click', function() {
 		infowindowLondon.open(myMap, markerGeekLabel);
-	});
-
-}
+			}); 
+		}
+    });      
 
 
 

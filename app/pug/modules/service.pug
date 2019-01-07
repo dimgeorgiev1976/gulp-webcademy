@@ -1,40 +1,40 @@
 .service
 	h2.heading.heading--services Services
-	.row.justify-content-center
-		.service__circle-wrapper
+	.row.no-gutters.offset-md-2.offset-xl-0#mobile-only
+		.service__wrapper
 			.service__card
-				.col-4.col-md-4.col-xl-3
+				.col-3.col-md-4.col-xl-3
 					.service__circle.service__circle--development
 						img(src='img/icons/web-dev.png' alt="web-development")
-				.col-8.col-md-8.hidden
+				.col-9.col-md-8.hidden
 					.service__text.service__text--development
 						p.service__specs.service__specs--development
 							span Web Development
 			.service__card
-				.col-4.col-md-4.col-xl-3
+				.col-3.col-md-4.col-xl-3
 					.service__circle.service__circle--design
 						img(src='img/icons/design.png' alt="design")
-				.col-8.col-md-8.hidden
+				.col-9.offset-md-1.hidden
 					.service__text.service__text--design 
 						p.service__specs.service__specs--design
 							span Design
 			.service__card
-				.col-4.col-md-4.col-xl-3
+				.col-3.col-md-4.col-xl-3
 					.service__circle.service__circle--branding
 						img(src='img/icons/branding.png' alt="branding")
-				.col-8.col-md-8.hidden
+				.col-9.offset-md-1.hidden
 					.service__text.service__text--branding 
 						p.service__specs.service__specs--branding
 							span Branding
 			.service__card
-				.col-4.col-md-4.col-xl-3
+				.col-3.col-md-4.col-xl-3
 					.service__circle.service__circle--research
 						img(src='img/icons/ux-research.png' alt="ux-research")
-				.col-8.col-md-8.hidden
+				.col-9.offset-md-1.hidden
 					.service__text.service__text--research 
 						p.service__specs.service__specs--research
 							span UX Research
-	.row
+	.row.justify-content-center
 		.shown
 			.service__text-wrapper
 				.col-12.col-md-8.col-xl-5
