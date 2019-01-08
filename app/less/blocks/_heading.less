@@ -25,6 +25,8 @@
 	@media (min-width: 768px) {
 		margin-right: 34px;		 }
     @media (min-width: 1200px) {
+    	font-size: 120px;
+		margin-bottom: 59px;
 		} }
 	&--contact {
 		margin-left: 3px;
@@ -45,9 +47,19 @@
 		font-size: 120px; 
 		margin-top: 0;
 		margin-left: 8px;	} }
-		
-
 	 } 
+ #visible {
+	display: none;
+    @media (min-width: 1200px){
+    	display: block;
+		}
+}
+#invisible {
+	display: block;
+    @media (min-width: 1200px){
+    	display: none;
+		}
+}
 .heading--medium { font-size: 24px;
 			line-height: 28px;
 			margin: 15px 1px 40px;	@media (min-width: 1200px) {  } }

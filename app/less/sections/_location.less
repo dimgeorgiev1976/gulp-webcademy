@@ -3,7 +3,8 @@
 @import "../sections/_location-block.less";
 
 .location {
-padding-top: 3px;
+	background-color: @pinkErrors;
+	padding-top: 3px;
 }
 .map-wrapper {
 	position: relative;
@@ -27,4 +28,24 @@ padding-top: 3px;
 
 .gm-style a[href^="https://maps.google.com/maps"] {
   display: none !important;
+}
+
+.text-wrapper {
+	display: flex;
+	background-color:@greenSucsses;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-left: 9px;
+&--xl-invisible{
+	display: flex;
+	    @media (min-width: 1200px){
+	    	display: none;
+			}	}
+&--xl-visible{
+	display: none;
+    @media (min-width: 1200px){
+    	display: flex;
+		}
+	}
 }
