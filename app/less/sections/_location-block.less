@@ -1,17 +1,4 @@
 
-
-.text-wrapper {
-	display: flex;
-	// background-color:@greenSucsses;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-	margin-left: 9px;
-	@media (min-width: 768px){
-	    } 
-    @media (min-width: 1200px){
-		}
-}
 p.contacts-block__title,
 p.contacts-block__address {
     	margin: 0;
@@ -22,17 +9,20 @@ p.contacts-block__title {
 p.contacts-block__address {
     line-height: 1.25;
     &--l-s { letter-spacing: 0.17px;  }
-    }
-.contacts-block {
+    @media (min-width: 1200px){
+    line-height: 1.30;
+        } }
+#marker-tooltip {
+    display: none;
     position: absolute;
-    left: 29.3%;
-    top: 57.45%;
-    transform: translate(0%, -50%);
+    // left: 29.3%;
+    // top: 57.45%;
+    // transform: translate(0%, -50%);
     
     width: 497px;
     height: 122px;
-    background-color: rgba(252, 252, 252, 1.8);
-    // background-color: @pinkErrors;
+    // background-color: rgba(252, 252, 252, 1.8);
+    background-color: @pinkErrors;
     font-family: 'Museo 300';
     font-size: 24px;
     font-style: normal;
@@ -44,7 +34,7 @@ p.contacts-block__address {
             display: block;
             position: absolute;
             border-left: 25px solid transparent;
-            border-bottom: 25px solid rgba(252, 252, 252, 1.8);
+            border-bottom: 25px solid @pinkErrors;
             border-right: 25px solid transparent;
             height: 0px;
             width: 0px;
@@ -52,11 +42,22 @@ p.contacts-block__address {
             top: -12%;
             left: 50%;
             transform: translate(-50%, 0%);
-                       } 
+        @media (min-width: 1200px){
+                border-top: 25px solid transparent;
+                border-right: 25px solid @pinkErrors;
+                border-bottom: 25px solid transparent;
+                top: 39%;
+                left: -4%;
+                }    } 
     @media (min-width: 768px){
 		
 	    } 
     @media (min-width: 1200px){
-
+         left: 57.3%;
+         top: 26.45%;
+         width: 399px;
+         height: 236px;
+         padding-top: 16px;
+         padding-left: 35px;
 		}
-                         }
+    }

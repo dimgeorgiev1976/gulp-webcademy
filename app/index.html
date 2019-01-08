@@ -194,15 +194,24 @@
     </div>
   </div>
   <div class="location">
-    <div class="heading heading--location">Find us</div>
+    <div class="heading heading--location" id="invisible">Find us</div>
+    <div class="heading heading--location" id="visible"> How to find us</div>
     <div class="map-wrapper">
       <div class="map" id="map"></div>
-      <div class="contacts-block"> 
+      <div id="marker-tooltip">
         <div class="row">
-          <div class="text-wrapper">
+          <div class="text-wrapper text-wrapper--xl-invisible">
             <p class="contacts-block__title">Geek Label </p>
             <p class="contacts-block__address contacts-block__address--l-s">4th Floor, 27 - 33 Bethnal Green Road</p>
             <p class="contacts-block__address">Shoreditch, London, E1 6LA</p>
+          </div>
+          <div class="text-wrapper text-wrapper--xl-visible">
+            <p class="contacts-block__title">Geek Label </p>
+            <p class="contacts-block__address contacts-block__address--l-s">4th Floor</p>
+            <p class="contacts-block__address contacts-block__address--l-s">27 - 33 Bethnal Green Road</p>
+            <p class="contacts-block__address">Shoreditch</p>
+            <p class="contacts-block__address">London</p>
+            <p class="contacts-block__address">E1 6LA</p>
           </div>
         </div>
       </div>
@@ -251,7 +260,7 @@
   <script src="libs/jquery-validation/jquery.validate.min.js"></script><!-- endbuild -->
   <div class="footer"></div><script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxAR2DIRJdRY-fCAp3soKVn7CGEYixjDI&callback=initMap"></script>
 <script src="libs/owl.carousel/owl.carousel.min.js"></script>
-<script src="js/googleMap.js"></script>
+<script src="js/tooltip.js"></script>
 <script src="js/validation-form.js"></script><!-- build:jsVendor js/vendor.js --><!-- endbuild -->
 <!-- build:jsMain js/main.js -->
   <script src="js/scripts.js"></script><!-- endbuild -->
