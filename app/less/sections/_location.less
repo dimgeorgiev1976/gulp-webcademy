@@ -30,16 +30,16 @@
 .gm-style a[href^="https://maps.google.com/maps"] {
   display: none !important;
 }
- #visible {
-	display: none;
+#visible.heading--location  {
+	display: none !important ;
     @media (min-width: 1200px){
-    	display: block;
+    	display: block !important ;
 		}
 }
-#invisible {
-	display: block;
+#invisible.heading--location {
+	display: block !important ;
     @media (min-width: 1200px){
-    	display: none;
+    	display: none !important ;
 		}
 }
 .text-wrapper {
