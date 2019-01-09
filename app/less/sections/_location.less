@@ -3,7 +3,8 @@
 @import "../sections/_location-block.less";
 
 .location {
-	background-color: @pinkErrors;
+	background-color: @grey-card;
+	// background-color: @pinkErrors;
 	padding-top: 3px;
 }
 .map-wrapper {
@@ -29,7 +30,18 @@
 .gm-style a[href^="https://maps.google.com/maps"] {
   display: none !important;
 }
-
+ #visible {
+	display: none;
+    @media (min-width: 1200px){
+    	display: block;
+		}
+}
+#invisible {
+	display: block;
+    @media (min-width: 1200px){
+    	display: none;
+		}
+}
 .text-wrapper {
 	display: flex;
 	background-color:@greenSucsses;
