@@ -11,8 +11,9 @@ function initMap() {
 
 	// Определяем точки которые хотим показать на карте
 	// var pos = {lat:51.524269, lng:-0.073770};
-	// var pos = {lat:51.524729, lng:-0.074023};
+	var GeekLabel = {lat:51.525444, lng:-0.074479};
 	var pos = {lat:51.524607, lng:-0.073941};
+	// var GeekLabel = {lat:51.527518, lng:-0.075159};
 	
 	// В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
 	var map = new google.maps.Map(document.getElementById('map'), {
@@ -53,19 +54,14 @@ function initMap() {
         title: 'Geek Label London', 
         icon: 'img/bg/map-pin.png' 
     }); 
-		// Определяем позицию маркера
-	    // position: pos,
-
-	    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
-	    // map: map,
-
-	    // Пишем название маркера - появится если навести на него курсор и немного подождать
-	    // title: 'Geek Label London',
-
-	    // Укажем свою иконку для маркера
-	    // icon: 'img/bg/map-pin.png'
-	// });
-
+	// Создаем маркер Big на карте
+	var markerBig = new google.maps.Marker({
+	        position: GeekLabel,  
+	        map: map, 
+	        title: 'Большой Театр London', 
+	        icon: 'http://rightblog.ru/wp-content/uploads/2016/07/theatre_icon.png'
+	        // icon: 'img/icons/map-pin.png' 
+	    }); 
 	// Создаем наполнение для информационного окна
 	  contentStringLondon = '<div id="content">'+
 	      '<div id="siteNotice">'+
@@ -75,45 +71,88 @@ function initMap() {
 	      '<p>4th Floor, <br>' +
 	      '<p>27 - 33 Bethnal Green Road <br>' +
 	      '<p>Shoreditch <br>' +
-	      'London </p>'+
-	      'E1 6LA</p>'+
+	      '<p>London <br>' +
+	      '<p>E1 6LA <br>' +
 	      '</div>'+
 	      '</div>';
-	
-	// Создаем информационное окно
+
+	// Создаем информационное окно 
 	var infowindowLondon = new google.maps.InfoWindow({
 		content: contentStringLondon,
 		Width: 400
 	});
 
-	  google.maps.event.addListener(marker, 'mouseover', function () { 
-        var point = fromLatLngToPoint(marker.getPosition(), map); 
-        $('#marker-tooltip').html(marker.tooltipContent ).css({ 
-            'left': point.x+100,  
-                'top': point.y-100  
-        }).show();  
-    }); 
-
-     google.maps.event.addListener(marker, 'mouseout', function () {  
-        $('#marker-tooltip').hide();  
-    }); 
-
- function fromLatLngToPoint(latLng, map) {  
-    var topRight = map.getProjection().fromLatLngToPoint(map.getBounds().getNorthEast()); 
-    var bottomLeft = map.getProjection().fromLatLngToPoint(map.getBounds().getSouthWest()); 
-    var scale = Math.pow(2, map.getZoom()); 
-    var worldPoint = map.getProjection().fromLatLngToPoint(latLng); 
-    return new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale); 
-} 
-
-	// Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
+    // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
 	marker.addListener('click', function() {
-		infowindowLondon.open(map, markerGeekLabel);
+		infowindowLondon.open(map, marker);
 	});
 
 
+	// Создаем информационное окно
+    var infowindowBig = new google.maps.InfoWindow({
+	    content: contentStringLondon,
+	    maxWidth: 400
+	  });
+     // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
+      markerBig.addListener('click', function() {
+        infowindowBig.open(map, markerBig);
+      });
+
+
+	// Прослушиватель событий для события mouseover
+	  google.maps.event.addListener(marker, 'mouseover', function () { 
+        var point = fromLatLngToPoint(markerBig.getPosition(), map); 
+        $('#marker-geek').html(marker.tooltipContent ).css({ 
+            'left': point.x-150,  
+                'top': point.y+270  
+          }).show(); 
+        var pointGeek = fromLatLngToPoint(markerBig.getPosition(), map); 
+	      $('#marker-tooltip').html(markerBig.tooltipContent ).css({ 
+	          'left': pointGeek.x+180,  
+	              'top': pointGeek.y+80
+	        }).show();  
+    }); 
+	  // Прослушиватель событий для события mouseover
+	  //   google.maps.event.addListener(markerBig, 'mouseover', function () { 
+	  //     var point = fromLatLngToPoint(markerBig.getPosition(), map); 
+	  //     $('#marker-tooltip').html(marker.tooltipContent ).css({ 
+	  //         'left': point.x+180,  
+	  //             'top': point.y+80
+	  //       }).show();  
+	  // }); 
+
+	   // Создаем события mouseout на маркере, чтобы скрыть подсказку
+		  google.maps.event.addListener(marker, 'mouseout', function () {  
+        $('#marker-geek').hide();  
+    }); 
+
+      // Создаем события mouseout на маркере, чтобы скрыть подсказку
+      // @media min-with 1200 tooltip  x+80 ; y-180 from 
+     google.maps.event.addListener(marker, 'mouseout', function () {  
+        $('#marker-tooltip').hide();  
+    }); 
+  		
+  		// Создаем пиксельные latlng координаты для маркера  
+  	   function fromLatLngToPoint(latLng, map) {  
+	    var topRight = map.getProjection().fromLatLngToPoint(map.getBounds().getNorthEast()); 
+	    var bottomLeft = map.getProjection().fromLatLngToPoint(map.getBounds().getSouthWest()); 
+	    var scale = Math.pow(2, map.getZoom()); 
+	    var worldPoint = map.getProjection().fromLatLngToPoint(latLng); 
+	    return new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale); 
+	} 
+
+	/* • • • • • Маркер и описание № 2 • • • • • */
+  		// Создаем пиксельные latlng координаты для маркера  
+	//  function fromLatLngToPoint(latLng, map) {  
+	//     var topRight = map.getProjection().fromLatLngToPoint(map.getBounds().getNorthEast()); 
+	//     var bottomLeft = map.getProjection().fromLatLngToPoint(map.getBounds().getSouthWest()); 
+	//     var scale = Math.pow(2, map.getZoom()); 
+	//     var worldPoint = map.getProjection().fromLatLngToPoint(latLng); 
+	//     return new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale); 
+	// } 
 
 }
+
 
 
 

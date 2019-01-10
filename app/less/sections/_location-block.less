@@ -12,17 +12,14 @@ p.contacts-block__address {
     @media (min-width: 1200px){
     line-height: 1.30;
         } }
-#marker-tooltip {
+
+.contacts-block, 
+.contacts-geek {
     display: none;
     position: absolute;
-    // left: 29.3%;
-    // top: 57.45%;
-    // transform: translate(0%, -50%);
-    
     width: 497px;
     height: 122px;
-    // background-color: rgba(252, 252, 252, 1.8);
-    background-color: @pinkErrors;
+    background-color: rgba(252, 252, 252, 1.8);
     font-family: 'Museo 300';
     font-size: 24px;
     font-style: normal;
@@ -34,7 +31,7 @@ p.contacts-block__address {
             display: block;
             position: absolute;
             border-left: 25px solid transparent;
-            border-bottom: 25px solid @pinkErrors;
+            border-bottom: 25px solid rgba(252, 252, 252, 1.8);
             border-right: 25px solid transparent;
             height: 0px;
             width: 0px;
@@ -44,20 +41,27 @@ p.contacts-block__address {
             transform: translate(-50%, 0%);
         @media (min-width: 1200px){
                 border-top: 25px solid transparent;
-                border-right: 25px solid @pinkErrors;
+                border-right: 25px solid rgba(252, 252, 252, 1.8);
                 border-bottom: 25px solid transparent;
                 top: 39%;
                 left: -4%;
                 }    } 
-    @media (min-width: 768px){
-		
-	    } 
+
     @media (min-width: 1200px){
          left: 57.3%;
          top: 26.45%;
-         width: 399px;
+         width: 344px;
          height: 236px;
-         padding-top: 16px;
-         padding-left: 35px;
+         padding-top: 21px;
+         padding-left: 25px;
 		}
+    }
+
+    .contacts-block {
+        &:before {
+              @media (max-width: 1200px){
+                border-bottom: 25px solid transparent;
+           }
+        } 
+        
     }
