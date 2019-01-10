@@ -30,21 +30,32 @@
 .gm-style a[href^="https://maps.google.com/maps"] {
   display: none !important;
 }
- #visible {
-	display: none;
+#visible.heading--location  {
+	display: none !important ;
     @media (min-width: 1200px){
-    	display: block;
+    	display: block !important ;
 		}
 }
-#invisible {
-	display: block;
+#invisible.heading--location {
+	display: block !important ;
     @media (min-width: 1200px){
-    	display: none;
+    	display: none !important ;
 		}
 }
+.contacts {
+    &--xl-invisible{
+    display: flex ;
+        @media (min-width: 1200px){
+            display: none !important; } }
+    &--xl-visible{
+    display: none ;
+    background-color: transparent ;
+    @media (min-width: 1200px){
+        display: flex;
+        background-color: #FFF; }  }
+  } 
 .text-wrapper {
 	display: flex;
-	background-color:@greenSucsses;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -52,12 +63,12 @@
 &--xl-invisible{
 	display: flex;
 	    @media (min-width: 1200px){
-	    	display: none;
+	    	display: none  ;
 			}	}
 &--xl-visible{
-	display: none;
+	display: none ;
     @media (min-width: 1200px){
-    	display: flex;
+    	display: flex ;
 		}
 	}
 }

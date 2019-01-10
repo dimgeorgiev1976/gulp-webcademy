@@ -1,6 +1,7 @@
 (function initMap() {  
 
-     var pos = new google.maps.LatLng(51.524607, -0.073941);  
+     var pos = new google.maps.LatLng(51.527518, -0.075159);  
+     var GeekLabel = new google.maps.LatLng(51.527518, -0.075159);  
 
      var map = new google.maps.Map($('#map')[0], {  
         center: pos,  
@@ -12,6 +13,14 @@
 
      var marker = new google.maps.Marker({  
         position: pos,  
+        map: map, 
+        title: 'Geek Label London', 
+        icon: 'img/icons/map-pin.png' 
+    }); 
+     // Создаем маркер 2  на карте
+
+  var markerBig = new google.maps.Marker({
+        position: GeekLabel,  
         map: map, 
         title: 'Geek Label London', 
         icon: 'img/icons/map-pin.png' 
@@ -37,7 +46,7 @@
         Width: 400  
     }); 
 
-
+   // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
      google.maps.event.addListener(marker, 'click', function () { 
         infoWindow.open(map, marker); 
     }); 
@@ -63,3 +72,27 @@
     var worldPoint = map.getProjection().fromLatLngToPoint(latLng); 
     return new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale); 
 } 
+      
+    // Создаем наполнение для информационного окна
+      var contentStringBigTheatre = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Большой театр</h1>'+
+        '<div id="bodyContent">'+
+        '<p>Госуда́рственный академи́ческий Большо́й теа́тр Росси́и, или просто Большой театр — один из крупнейших' +
+        'в России и один из самых значительных в мире театров оперы и балета.</p>'+
+        '<p><b>Веб-сайт:</b> <a href="http://www.bolshoi.ru/" target="_blank">bolshoi.ru</a>'+
+        '</p>'+
+        '</div>'+
+        '</div>';
+
+       // Создаем информационное окно
+  var infowindowBig = new google.maps.InfoWindow({
+    content: contentStringBigTheatre,
+    maxWidth: 400
+  });
+
+        // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
+          markerBig.addListener('click', function() {
+            infowindowBig.open(map, markerBig);
+          });
