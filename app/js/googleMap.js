@@ -13,7 +13,6 @@ function initMap() {
 	// var pos = {lat:51.524269, lng:-0.073770};
 	var GeekLabel = {lat:51.525444, lng:-0.074479};
 	var pos = {lat:51.524607, lng:-0.073941};
-	// var GeekLabel = {lat:51.527518, lng:-0.075159};
 	
 	// В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
 	var map = new google.maps.Map(document.getElementById('map'), {
@@ -63,18 +62,31 @@ function initMap() {
 	        // icon: 'img/icons/map-pin.png' 
 	    }); 
 	// Создаем наполнение для информационного окна
-	  contentStringLondon = '<div id="content">'+
+	var  contentStringLondon = '<div id="content">'+
 	      '<div id="siteNotice">'+
 	      '</div>'+
 	      '<h1 id="firstHeading" class="firstHeading">Geek Label</h1>'+
 	      '<div id="bodyContent">'+
 	      '<p>4th Floor, <br>' +
-	      '<p>27 - 33 Bethnal Green Road <br>' +
-	      '<p>Shoreditch <br>' +
-	      '<p>London <br>' +
+	      '27 - 33 Bethnal Green Road <br>' +
+	      'Shoreditch <br>' +
+	      'London <br>' +
 	      '<p>E1 6LA <br>' +
 	      '</div>'+
 	      '</div>';
+
+	 // Создаем наполнение для информационного окна
+      var contentStringBigTheatre = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Большой театр</h1>'+
+        '<div id="bodyContent">'+
+        '<p>Госуда́рственный академи́ческий Большо́й теа́тр Росси́и, или просто Большой театр — один из крупнейших' +
+        'в России и один из самых значительных в мире театров оперы и балета.</p>'+
+        '<p><b>Веб-сайт:</b> <a href="http://www.bolshoi.ru/" target="_blank">bolshoi.ru</a>'+
+        '</p>'+
+        '</div>'+
+        '</div>';
 
 	// Создаем информационное окно 
 	var infowindowLondon = new google.maps.InfoWindow({
@@ -90,7 +102,7 @@ function initMap() {
 
 	// Создаем информационное окно
     var infowindowBig = new google.maps.InfoWindow({
-	    content: contentStringLondon,
+	    content: contentStringBigTheatre,
 	    maxWidth: 400
 	  });
      // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
@@ -109,25 +121,17 @@ function initMap() {
         var pointGeek = fromLatLngToPoint(markerBig.getPosition(), map); 
 	      $('#marker-tooltip').html(markerBig.tooltipContent ).css({ 
 	          'left': pointGeek.x+180,  
-	              'top': pointGeek.y+80
+	              'top': pointGeek.y+90
 	        }).show();  
     }); 
-	  // Прослушиватель событий для события mouseover
-	  //   google.maps.event.addListener(markerBig, 'mouseover', function () { 
-	  //     var point = fromLatLngToPoint(markerBig.getPosition(), map); 
-	  //     $('#marker-tooltip').html(marker.tooltipContent ).css({ 
-	  //         'left': point.x+180,  
-	  //             'top': point.y+80
-	  //       }).show();  
-	  // }); 
-
+	 
 	   // Создаем события mouseout на маркере, чтобы скрыть подсказку
 		  google.maps.event.addListener(marker, 'mouseout', function () {  
         $('#marker-geek').hide();  
     }); 
 
       // Создаем события mouseout на маркере, чтобы скрыть подсказку
-      // @media min-with 1200 tooltip  x+80 ; y-180 from 
+      // @media min-with 1200 tooltip 
      google.maps.event.addListener(marker, 'mouseout', function () {  
         $('#marker-tooltip').hide();  
     }); 
@@ -141,17 +145,7 @@ function initMap() {
 	    return new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale); 
 	} 
 
-	/* • • • • • Маркер и описание № 2 • • • • • */
-  		// Создаем пиксельные latlng координаты для маркера  
-	//  function fromLatLngToPoint(latLng, map) {  
-	//     var topRight = map.getProjection().fromLatLngToPoint(map.getBounds().getNorthEast()); 
-	//     var bottomLeft = map.getProjection().fromLatLngToPoint(map.getBounds().getSouthWest()); 
-	//     var scale = Math.pow(2, map.getZoom()); 
-	//     var worldPoint = map.getProjection().fromLatLngToPoint(latLng); 
-	//     return new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale); 
-	// } 
-
-}
+	}
 
 
 
