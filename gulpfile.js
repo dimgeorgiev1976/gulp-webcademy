@@ -151,6 +151,9 @@ gulp.task('copy:libs', function(callback) {
     gulp.src('node_modules/owl.carousel/dist/**/*.*')
 		.pipe(gulp.dest('./app/libs/owl.carousel'));
 
+    gulp.src('node_modules/page-scroll-to-id/**/*.*')
+		.pipe(gulp.dest('./app/libs/page-scroll-to-id'));
+
 	gulp.src('node_modules/bootstrap-4-grid/css/**/*.*')
 		.pipe(gulp.dest('./app/libs/bootstrap-4-grid'))
 
