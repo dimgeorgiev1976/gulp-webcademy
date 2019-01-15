@@ -126,15 +126,18 @@ div.mobile-only {
             @media (min-width: 768px){
                display: block;
                 vertical-align: middle;
-                margin-bottom: 732px; }   
+                margin-bottom: 732px; 
+                width: 575px;
+                margin-left: 100px;}   
                 @media (min-width: 1200px){
                display: none;   }   }
-div.mobile-only * {  
+.mobile-only-after-click * {  
     // background-color: @green-bg;
     }
 .owl-carousel .mobile-only-after-click {
        display: flex;
        flex-direction: column; 
+       align-items: center;
        @media (min-width: 1200px){
        flex-direction: row;
       } }

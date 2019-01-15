@@ -110,7 +110,6 @@ function initMap() {
         infowindowBig.open(map, markerBig);
       });
 
-
 	// Прослушиватель событий для события mouseover
 	  google.maps.event.addListener(marker, 'mouseover', function () { 
         var point = fromLatLngToPoint(markerBig.getPosition(), map); 
