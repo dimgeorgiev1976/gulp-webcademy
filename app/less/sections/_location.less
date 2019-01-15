@@ -9,13 +9,14 @@
 }
 .map-wrapper {
 	position: relative;
+	padding-bottom: 8px;
 	  @media (min-width: 1200px){
     	padding-bottom: 108px;
 		}
 }
 /* Set the size of the div element that contains the map */
 .map {
-	height: 1355px;
+	height: 745px;
 	width: 100%;
 	 @media (min-width: 1200px){
  	height: 731px;
@@ -50,14 +51,14 @@
 	}
 .contacts {
     &--xl-invisible{
-    display: flex ;
+    display: none ;
         @media (min-width: 1200px){
             display: none !important; } }
     &--xl-visible{
     display: none ;
     background-color: transparent ;
     @media (min-width: 1200px){
-        display: flex;
+        display: none;
         background-color: #FFF; }  }
   } 
 .text-wrapper {

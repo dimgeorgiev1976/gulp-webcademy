@@ -17,10 +17,11 @@ p.contacts-block__address {
 .contacts-geek {
     display: none;
     position: absolute;
+    
     width: 497px;
     height: 122px;
     
-    background-color: rgba(252, 252, 252, 1.8);
+    background-color: #fff;
     font-family: 'Museo 300';
     font-size: 24px;
     font-style: normal;
@@ -32,7 +33,7 @@ p.contacts-block__address {
             display: block;
             position: absolute;
             border-left: 25px solid transparent;
-            border-bottom: 25px solid rgba(252, 252, 252, 1.8);
+            border-bottom: 25px solid #fff;
             border-right: 25px solid transparent;
             height: 0px;
             width: 0px;
@@ -42,28 +43,24 @@ p.contacts-block__address {
             transform: translate(-50%, 0%);
         @media (min-width: 1200px){
                 border-top: 25px solid transparent;
-                border-right: 25px solid rgba(252, 252, 252, 1.8);
+                border-right: 25px solid #fff;
                 border-bottom: 25px solid transparent;
                 top: 39%;
                 left: -4%;
                 }    } 
-
     @media (min-width: 1200px){
-
-         left: 57.3%;
-         top: 26.45%;
-         width: 399px;
-         height: 236px;
-         padding-top: 21px;
-         padding-left: 25px;
-		}
-    }
-
-    .contacts-block {
-
-        &:before {
-              @media (max-width: 1200px){
-                border-bottom: 25px solid transparent; 
-                   }
-                }     
-              }
+                 left: 57.3%;
+                 top: 26.45%;
+                 width: 399px;
+                 height: 236px;
+                 padding-top: 21px;
+                 padding-left: 25px;
+        		}
+            }
+.contacts-block {
+    &:before {
+          @media (max-width: 1200px){
+            border-bottom: 25px solid transparent; 
+               }
+            }     
+          }

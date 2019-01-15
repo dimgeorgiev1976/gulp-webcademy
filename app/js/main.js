@@ -20,7 +20,7 @@ $(document).ready(function(){
       });
     two.owlCarousel({
       loop:true,
-      margin:10,
+      margin:90,
       nav:true,
       navSpeed:700,
       navText : ["", ""],
