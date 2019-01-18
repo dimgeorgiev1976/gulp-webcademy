@@ -67,13 +67,16 @@ body(class=pageClass)
 	include ../modules/footer.pug
 
 	<!-- build:jsVendor js/vendor.js -->
+	<script src="libs/owl.carousel/owl.carousel.min.js"></script>
+	<script src="libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+	<script src="js/googleMap.js"></script>
 	block scripts
 	<!-- endbuild -->
 	
 	<!-- build:jsMain js/main.js -->
-	script(src="js/scripts.js")
+	script(src="js/validation-form.js")
 	<!-- endbuild -->
-	
+
 	<!-- build:jsMain js/main.js -->
 	script(src="js/main.js")
 	<!-- endbuild -->
