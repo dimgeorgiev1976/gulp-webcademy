@@ -5,16 +5,18 @@ $(document).ready(function(){
    var two = $("#owl-two");
    one.owlCarousel({
       loop:true,
-      margin:90,
+      margin:20,
       dotsEach:2,
       smartSpeed:700,
       responsive:{
-          0:{ items:1},
+          0:{ items:1,
+            autoWidth: true},
           768:{ items:1,
             margin:100},
           1200:{ items:2,
             nav:true,
            navText : ["", ""],
+           autoWidth: true,
               } 
            }
       });
@@ -27,13 +29,15 @@ $(document).ready(function(){
       responsive:{
           0:{  items:1
           },
-          768:{ items:2
-          },
+          768:{ items:2,
+             nav:true
+              },
           1200:{ items:4
           }
             }
         });
 
+      //  решение для удаления ширины JS
 
         // Go to the next item
         

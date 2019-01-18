@@ -2,10 +2,10 @@
 	h2.heading.heading--clients Clients
 	.container
 		.row.justify-content-center
-			.col.flex-grow-0
-				.owl-wrapper.shown
+			.col-12.flex-grow-0
+				.owl-wrapper
 					#owl-one.owl-one.owl-carousel
-						.slider__img 
+						.slider__img
 							a.slider__img--tpg
 						.slider__img.slider__img--margin-top
 							a.slider__img--tvs
@@ -14,21 +14,21 @@
 					#owl-dot
 						a.owl-dot--new
 							span
-				.mobile-only.shown
-					#owl-two.owl-two.owl-carousel
-						.mobile-only-after-click
-							.slider__img
-								a.slider__img--tpg
-							.slider__img.slider__img--margin-top
-								a.slider__img--tvs
-							.slider__img.slider__img--margin-top
-								a.slider__img--pshe
-						#owl-prev
-							a.owl-dot--new
-								span
-						#owl-next
-							a.owl-dot--new
-								span
+			.mobile-only.shown
+				#owl-two.owl-two.owl-carousel
+					.mobile-only-after-click
+						.slider__img
+							a.slider__img--tpg
+						.slider__img.slider__img--margin-top
+							a.slider__img--tvs
+						.slider__img.slider__img--margin-top
+							a.slider__img--pshe
+					#owl-prev
+						a.owl-dot--new
+							span
+					#owl-next
+						a.owl-dot--new
+							span
 	.row.justify-content-center
 		.col-xl-3
 			a.button.button-down--clients.PageScroll2id(href="#location")

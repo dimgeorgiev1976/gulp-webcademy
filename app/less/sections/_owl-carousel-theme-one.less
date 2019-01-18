@@ -89,9 +89,9 @@
      @media (min-width: 768px){
                 } }
 .owl-carousel {
+          background-color: @grey-card;
           margin-top: 264px;
      @media (min-width: 768px){
-          background-color: #fff;
           margin-top: 0px;
           }  } 
 .owl-theme .owl-controls .owl-page {
@@ -106,10 +106,8 @@
     opacity: 0.5;
     width: 12px; }  
     
+
 .owl-wrapper {
-  display: none;
-}
-.owl-wrapper.shown {
   display: block;
   @media (min-width: 768px){
     display: none;   }
@@ -136,13 +134,16 @@ div.mobile-only {
     }
 .owl-carousel .mobile-only-after-click {
        display: flex;
-       flex-direction: column; 
+       flex-direction: row;
+       
+      @media (min-width: 768px){
+       flex-direction: column; }
        align-items: center;
-       @media (min-width: 1200px){
+      @media (min-width: 1200px){
        flex-direction: row;
       } }
        
-      
+
 
 
 
