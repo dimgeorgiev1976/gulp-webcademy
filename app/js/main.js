@@ -5,7 +5,7 @@ $(document).ready(function(){
    var two = $("#owl-two");
    one.owlCarousel({
       loop:true,
-      margin:20,
+      margin:90,
       dotsEach:2,
       smartSpeed:700,
       responsive:{
