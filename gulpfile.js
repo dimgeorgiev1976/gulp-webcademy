@@ -180,7 +180,7 @@ gulp.task('del:docs', function() {
 });
 
 gulp.task('img:dist', function() {
-    return gulp.src(['./app/img/**/*.{jpg, jpeg, png, gif}', '!./app/img/svg-for-sprites/**/*.svg'])
+    return gulp.src(['./app/img/**/*.*', '!./app/img/svg-for-sprites/**/*.svg'])
 	.pipe(imagemin({
 		progressive: true,
 		// optimizationLevel: 5,
